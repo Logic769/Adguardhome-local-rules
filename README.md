@@ -13,12 +13,12 @@
 
 ### 黑名单订阅
 ```
-https://github.com/用户名/Adguardhome-local-rules/releases/latest/download/blacklist.txt
+https://github.com/Logic769/Adguardhome-local-rules/releases/latest/download/blacklist.txt
 ```
 
 ### 白名单订阅
 ```
-https://github.com/用户名/Adguardhome-local-rules/releases/latest/download/whitelist.txt
+https://github.com/Logic769/Adguardhome-local-rules/releases/latest/download/whitelist.txt
 ```
 
 ## 使用方法

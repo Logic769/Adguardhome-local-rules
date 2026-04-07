@@ -47,7 +47,7 @@ jobs:
 
       - name: Create release notes
         run: |
-          cat > release_notes.md << EOF
+          cat > release_notes.md << 'EOF'
           ## AdGuard Home Rules Update
 
           **Release Date:** ${{ steps.date.outputs.date }}
@@ -57,8 +57,8 @@ jobs:
           - **Whitelist Rules:** ${{ steps.count.outputs.whitelist }} entries
 
           ### Subscription URLs
-          - **Blacklist:** \`https://github.com/${{ github.repository }}/releases/latest/download/blacklist.txt\`
-          - **Whitelist:** \`https://github.com/${{ github.repository }}/releases/latest/download/whitelist.txt\`
+          - **Blacklist:** `https://github.com/${{ github.repository }}/releases/latest/download/blacklist.txt`
+          - **Whitelist:** `https://github.com/${{ github.repository }}/releases/latest/download/whitelist.txt`
 
           ### How to Subscribe
           1. Open AdGuard Home settings
@@ -67,14 +67,12 @@ jobs:
           EOF
           cat release_notes.md
 
-      - name: Check GitHub CLI
-        run: |
-          gh --version
-
       - name: Delete old tag
         run: |
           git tag -d latest || true
           git push origin :latest || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create release
         uses: softprops/action-gh-release@v1

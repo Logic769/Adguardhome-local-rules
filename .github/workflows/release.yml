@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  packages: write
 
 jobs:
   release:
@@ -22,6 +23,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Debug information
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Event: ${{ github.event_name }}"
+          ls -la
 
       - name: Get current date
         id: date
@@ -34,6 +42,8 @@ jobs:
           whitelist_count=$(wc -l < whitelist.txt)
           echo "blacklist=${blacklist_count}" >> $GITHUB_OUTPUT
           echo "whitelist=${whitelist_count}" >> $GITHUB_OUTPUT
+          echo "Blacklist count: $blacklist_count"
+          echo "Whitelist count: $whitelist_count"
 
       - name: Create release notes
         run: |
@@ -55,12 +65,16 @@ jobs:
           2. Go to Filters > DNS blocklists (or DNS allowlists)
           3. Add the subscription URL above
           EOF
+          cat release_notes.md
 
-      - name: Delete old releases
+      - name: Check GitHub CLI
         run: |
-          gh release delete latest --yes --cleanup-tag || true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          gh --version
+
+      - name: Delete old tag
+        run: |
+          git tag -d latest || true
+          git push origin :latest || true
 
       - name: Create release
         uses: softprops/action-gh-release@v1
@@ -71,5 +85,6 @@ jobs:
           files: |
             blacklist.txt
             whitelist.txt
+          overwrite: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

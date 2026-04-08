@@ -2,7 +2,7 @@
 
 ## 项目说明
 
-这是一个用于 AdGuard Home 的规则集合，作为https://github.com/Logic769/AdguardHome-Rules项目的本地规则补充。包含黑名单和白名单规则。规则会通过 GitHub Actions 定时更新并发布到 releases。
+这是一个用于 AdGuard Home 的规则集合。包含黑名单和白名单规则。规则会通过 GitHub Actions 定时更新并发布到 releases。
 
 ## 规则内容
 

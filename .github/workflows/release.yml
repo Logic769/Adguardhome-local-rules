@@ -54,33 +54,14 @@ jobs:
           echo "3. Add the subscription URL above" >> release_notes.md
 
       - name: Create release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
-          release_name: Rules ${{ steps.date.outputs.date }}
+          name: Rules ${{ steps.date.outputs.date }}
           body_path: release_notes.md
-          draft: false
-          prerelease: false
-
-      - name: Upload blacklist
-        uses: actions/upload-release-asset@v1
+          files: |
+            blacklist.txt
+            whitelist.txt
+          overwrite: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./blacklist.txt
-          asset_name: blacklist.txt
-          asset_content_type: text/plain
-
-      - name: Upload whitelist
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./whitelist.txt
-          asset_name: whitelist.txt
-          asset_content_type: text/plain

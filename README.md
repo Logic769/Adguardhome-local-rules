@@ -3,7 +3,7 @@
 ## 项目说明
 
 这是一个用于 AdGuard Home 的规则集合，作为 `https://github.com/Logic769/AdguardHome-Rules` 的规则补充。
-规则会不定期更新，通过 GitHub Actions 定时更新并发布到 releases。
+规则会不定期更新，通过 GitHub Actions 定时发布到 releases。
 
 
 

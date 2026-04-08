@@ -4,6 +4,8 @@
 
 这是一个用于 AdGuard Home 的规则集合，包含黑名单和白名单规则。规则会通过 GitHub Actions 定时更新并发布到 releases，方便用户订阅。
 
+作为 `https://github.com/Logic769/AdguardHome-Rules` 的规则补充。
+
 ## 规则内容
 
 - **blacklist.txt** - 包含需要阻止的域名

@@ -4,3 +4,8 @@
 @@||lf3-data.volccdn.com^$important
 @@||api-cn.store.heytapmobi.com^$important
 @@||juejin.cn^$important
+@@||msgacs.m.taobao.com^$important
+@@||zconfig.alibabausercontent.com^$important
+@@||px.ucweb.com^$important
+@@||amdc.m.taobao.com^$important
+@@||ywtb.mps.gov.cn^$important

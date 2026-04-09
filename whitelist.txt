@@ -9,3 +9,4 @@
 @@||px.ucweb.com^$important
 @@||amdc.m.taobao.com^$important
 @@||ywtb.mps.gov.cn^$important
+@@||learn.chaoxing.com^$important

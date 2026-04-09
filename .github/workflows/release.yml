@@ -20,15 +20,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Delete existing tag
-        run: |
-          git tag -d latest || true
-          git push origin :latest || true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get current date
         id: date
@@ -56,12 +47,11 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: latest
+          tag_name: v${{ steps.date.outputs.date }}
           name: Rules ${{ steps.date.outputs.date }}
           body_path: release_notes.md
           files: |
             blacklist.txt
             whitelist.txt
-          overwrite: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

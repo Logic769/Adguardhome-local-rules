@@ -15,13 +15,15 @@
 
 ### 黑名单订阅
 ```
-https://github.com/Logic769/Adguardhome-local-rules/releases/latest/download/blacklist.txt
+https://raw.githubusercontent.com/Logic769/Adguardhome-local-rules/main/blacklist.txt
 ```
 
 ### 白名单订阅
 ```
-https://github.com/Logic769/Adguardhome-local-rules/releases/latest/download/whitelist.txt
+https://raw.githubusercontent.com/Logic769/Adguardhome-local-rules/main/whitelist.txt
 ```
+
+> **注意**：以上链接直接指向仓库中的最新文件，确保订阅链接始终有效。
 
 ## 使用方法
 

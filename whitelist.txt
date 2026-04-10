@@ -10,3 +10,6 @@
 @@||amdc.m.taobao.com^$important
 @@||ywtb.mps.gov.cn^$important
 @@||learn.chaoxing.com^$important
+@@||beian.mps.gov.cn^$important
+@@||loc.map.baidu.com^$important
+@@||ofloc.map.baidu.com^$important

@@ -13,3 +13,4 @@
 @@||beian.mps.gov.cn^$important
 @@||loc.map.baidu.com^$important
 @@||ofloc.map.baidu.com^$important
+@@||beian.miit.gov.cn^$important

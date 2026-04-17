@@ -16,3 +16,5 @@
 @@||beian.miit.gov.cn^$important
 @@||api-cn.theme.heytapmobi.com^$important
 @@||cnbj1.fds.api.xiaomi.com^$important
+@@||music.163.com^$important
+

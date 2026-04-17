@@ -14,3 +14,5 @@
 @@||loc.map.baidu.com^$important
 @@||ofloc.map.baidu.com^$important
 @@||beian.miit.gov.cn^$important
+@@||api-cn.theme.heytapmobi.com^$important
+@@||cnbj1.fds.api.xiaomi.com^$important

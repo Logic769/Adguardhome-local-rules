@@ -18,3 +18,4 @@
 @@||cnbj1.fds.api.xiaomi.com^$important
 @@||music.163.com^$important
 @@||upos-sz-mirrorcos.bilivideo.com^$important
+@@||inews.gtimg.com^$important

@@ -20,4 +20,6 @@
 @@||upos-sz-mirrorcos.bilivideo.com^$important
 @@||inews.gtimg.com^$important
 @@||cdn.cnbj1.fds.api.mi-img.com^$important
-
+@@||mtalk.google.com^$important
+@@||img.shouji.sogou.com^$important
+@@||tongdun-fingerprint.walmartmobile.cn^$important

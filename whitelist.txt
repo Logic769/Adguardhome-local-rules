@@ -23,3 +23,5 @@
 @@||mtalk.google.com^$important
 @@||img.shouji.sogou.com^$important
 @@||tongdun-fingerprint.walmartmobile.cn^$important
+@@||miniapp.bilibili.com^$important
+@@||logservice.hicloud.com^$important

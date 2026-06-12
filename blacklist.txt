@@ -1042,3 +1042,26 @@
 ||api-cfg.8ziben.com^$important
 ||sf6-fe-tos.pglstatp-toutiao.com^$important
 ||missile.iytcdn.com^$important
+
+# 天猫校园 & 阿里系广告域名（2026-06-12 新增）
+# 由小酱整理，包含阿里广告联盟、数据统计、推送埋点、TopOn/Octopus SDK等
+||alimama.com^$important
+||mmstat.com^$important
+||atanx.alicdn.com^$important
+||log.mmstat.com^$important
+||gw.tmall.com^$path=/union/$important
+||taobao.com^$path=/campaign$important
+||广告.tmall.com^$important
+||pubnub.adgeo.163.com^$important
+||adash.m.taobao.com^$important
+||adashbc.m.taobao.com^$important
+||adash-c.m.taobao.com^$important
+||acjs.aliyun.com^$important
+||alogs.umeng.com^$important
+||ynuf.aliapp.org^$important
+||openapi.anythinktech.com^$important
+||tk.anythinktech.com^$important
+||sdk.e.qq.com^$important
+||h-adashx.ut.taobao.com^$important
+||nbsdk-baichuan.alicdn.com^$important
+||baichuan-sdk.alicdn.com^$important

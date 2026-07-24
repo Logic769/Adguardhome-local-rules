@@ -1065,3 +1065,8 @@
 ||h-adashx.ut.taobao.com^$important
 ||nbsdk-baichuan.alicdn.com^$important
 ||baichuan-sdk.alicdn.com^$important
+
+||e.oppomobile.com^$important
+||appinfo.gdt.qq.com^$important
+||auni.telecome.cn^$important
+||uc-track-gl.heytapmobi.com^$important

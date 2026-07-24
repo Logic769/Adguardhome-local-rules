@@ -102,3 +102,15 @@
 #网易易盾（安全验证）
 @@||dun.163.com^
 @@||cstaticdun.126.net^
+
+@@||whois.pconline.com.cn^$important
+@@||game.bilibili.com^$important
+@@||iot-earbuds-cn.heytapmobi.com^$important
+@@||omes-sec.heytapmobi.com^$important
+@@||obus-cn.dc.heytapmobi.com^$important
+@@||dc-dragate-cn.heytapmobi.com^$important
+@@||obus-dc20058-cn.heytapmobi.com^$important
+@@||obus-dctech-cn.heytapmobi.com^$important
+@@||obus-dc20123-cn.heytapmobi.com^$important
+@@||smartcard.apps.coloros.com^$important
+@@||client-uc.heytapmobi.com^$important

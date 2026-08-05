@@ -114,3 +114,6 @@
 @@||obus-dc20123-cn.heytapmobi.com^$important
 @@||smartcard.apps.coloros.com^$important
 @@||client-uc.heytapmobi.com^$important
+@@||meteorology.caiyuncdn.com^$important
+@@||c.dun.163yun.com^$important
+@@||c.dun.163.com^$important

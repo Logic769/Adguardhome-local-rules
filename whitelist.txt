@@ -61,9 +61,6 @@
 @@||res.wx.qq.com^
 @@||sdk*faceid.qq.com^
 
-#腾讯推送
-@@||guid.tpns.tencent.com^
-
 #腾讯分发图片？
 @@||pp.myapp.com^
 

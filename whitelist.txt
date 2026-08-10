@@ -114,3 +114,4 @@
 @@||meteorology.caiyuncdn.com^$important
 @@||c.dun.163yun.com^$important
 @@||c.dun.163.com^$important
+@@||guid.tpns.tencent.com^$important

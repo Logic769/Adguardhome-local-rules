@@ -143,3 +143,10 @@
 
 #天猫网关（App/网页主站网关，CNAME=shop.tmall.com）
 @@||gw.tmall.com^$important
+
+#腾讯手游 MSDK：登录/支付/公告/资源入口，被 GOODBYEADS、adsethost、那个谁520 三个名单误拦
+#（实测 msdk.qq.com 被拦；di.ssl.msdk.qq.com 才是数据上报端点，保持拦截）
+@@||msdk.qq.com^$important
+@@||ssl.msdk.qq.com^$important
+@@||a.ssl.msdk.qq.com^$important
+@@||img.ssl.msdk.qq.com^$important

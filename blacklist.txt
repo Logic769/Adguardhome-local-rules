@@ -1076,9 +1076,19 @@
 # 注意：同一次启动里的 huachenjie.com（官网标题就是“闪动校园”）
 # 与 lptiyu.com（乐跑体育）是 App 自己的后端，必须保留，不要拦
 ||litemob.net^$important
+||sdk-stats.litemob.net^$important
+||stats.litemob.net^$important
 ||lingjuad.com^$important
+||hs.lingjuad.com^$important
+||bid.hs.lingjuad.com^$important
+||sdkconf.hs.lingjuad.com^$important
+||sl.hs.lingjuad.com^$important
 ||luckas.cn^$important
+||static.luckas.cn^$important
 ||8ziben.com^$important
+||api-dsp.8ziben.com^$important
+||api-events.8ziben.com^$important
+||static-dsp.8ziben.com^$important
 ||inner.lovefree.cc^$important
 ||report.idazhe.net^$important
 ||union-dracoapi.yy.com^$important

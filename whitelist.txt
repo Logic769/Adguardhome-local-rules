@@ -154,11 +154,12 @@
 #国内常用软件/游戏误杀扫描（2026-10-01）后放行的功能域名
 #判据：这些是登录/账号/静态资源/CDN 类功能入口，被上游名单当广告拦掉，
 #      放行后不影响广告拦截（广告走各自独立的域名）
-@@||mam.netease.com^$important        # 网易账号中心（网易系游戏/App 登录依赖）
-@@||elemecdn.com^$important           # 饿了么静态资源 CDN（图片/JS）
-@@||pinduoduo.com^$important          # 拼多多主域
-@@||pddpic.com^$important             # 拼多多图床
-@@||yangkeduo.com^$important          # 拼多多旧域名
-@@||pingan.com^$important             # 平安集团主域
-@@||37.com^$important                 # 三七互娱官网
-@@||37wan.com^$important              # 37 游戏平台
+#注意：规则后面不要再跟行内注释，注释一律单独成行
+@@||mam.netease.com^$important
+@@||elemecdn.com^$important
+@@||pinduoduo.com^$important
+@@||pddpic.com^$important
+@@||yangkeduo.com^$important
+@@||pingan.com^$important
+@@||37.com^$important
+@@||37wan.com^$important

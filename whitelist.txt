@@ -163,3 +163,9 @@
 @@||pingan.com^$important
 @@||37.com^$important
 @@||37wan.com^$important
+
+#误杀扫描待确认项（2026-10-01 用户确认全部放行）
+#aweme.snssdk.com 是抖音 App 核心接口，4 个上游名单共识拦截，会直接导致抖音打不开
+#biliapi.net 是 B站 API；它同时也写在本仓库黑名单里，白名单优先级更高，会从黑名单中移除
+@@||aweme.snssdk.com^$important
+@@||biliapi.net^$important

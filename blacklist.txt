@@ -1070,3 +1070,15 @@
 ||appinfo.gdt.qq.com^$important
 ||auni.telecome.cn^$important
 ||uc-track-gl.heytapmobi.com^$important
+
+# 2026-10-01 新增：闪动校园的开屏/信息流广告 SDK
+# 来源：AGH 查询日志里该 App 冷启动那一刻的真实请求（09:07 抓取）
+# 注意：同一次启动里的 huachenjie.com（官网标题就是“闪动校园”）
+# 与 lptiyu.com（乐跑体育）是 App 自己的后端，必须保留，不要拦
+||litemob.net^$important
+||lingjuad.com^$important
+||luckas.cn^$important
+||8ziben.com^$important
+||inner.lovefree.cc^$important
+||report.idazhe.net^$important
+||union-dracoapi.yy.com^$important

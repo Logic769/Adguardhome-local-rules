@@ -181,3 +181,9 @@
 @@||grs.platform.dbankcloud.ru^$important
 #华为内容中心 CDN（仅 1 个上游名单拦截，属功能域，非广告）
 @@||contentcenter-drcn.dbankcdn.cn^$important
+
+#Sukka 的 DNS 出口查询工具后端（2026-10-01 用户要求放行）
+#d.skk.moe 是 ip.skk.moe/dns-exit-lookup 这个工具自己的后端域名，
+#被 natsuki 名单误收。实测：经本名单解析为 NXDOMAIN，直连 Unbound 与
+#阿里/腾讯/Google 公共解析器均正常（Cloudflare 172.67.148.227 等）。
+@@||d.skk.moe^$important

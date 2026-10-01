@@ -115,3 +115,31 @@
 @@||c.dun.163yun.com^$important
 @@||c.dun.163.com^$important
 @@||guid.tpns.tencent.com^$important
+
+#天猫校园 / 淘宝天猫系 App 的网络与风控接口（ACS/JMACS/MSGACS/AMDC）
+#这些接口被拦截时，淘宝、天猫、天猫校园等 App 会判定为“无网络”；
+#它们不承载广告（CNAME 指向 alibabadns/aliyuncs 的业务集群）
+@@||acs.m.taobao.com^$important
+@@||acs.wapa.taobao.com^$important
+@@||acs4baichuan.m.taobao.com^$important
+@@||acs4public.m.taobao.com^$important
+@@||openacs.m.taobao.com^$important
+@@||openacs4uc.m.taobao.com^$important
+@@||openjmacs.m.taobao.com^$important
+@@||openjmacs4uc.m.taobao.com^$important
+@@||accscdn.m.taobao.com^$important
+@@||accscdn4public.m.taobao.com^$important
+@@||amdcopen.m.taobao.com^$important
+@@||amdc.alipay.com^$important
+@@||gaode-acs.m.taobao.com^$important
+@@||gaode-jmacs.m.taobao.com^$important
+@@||xjp-jmacs.m.taobao.com^$important
+@@||xjp-msgacs.m.taobao.com^$important
+@@||youku-acs.m.taobao.com^$important
+@@||youku-jmacs.m.taobao.com^$important
+@@||umengacs.m.taobao.com^$important
+@@||umengjmacs.m.taobao.com^$important
+@@||unitacs.m.taobao.com^$important
+
+#天猫网关（App/网页主站网关，CNAME=shop.tmall.com）
+@@||gw.tmall.com^$important

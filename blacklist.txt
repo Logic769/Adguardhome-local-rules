@@ -1092,3 +1092,15 @@
 ||inner.lovefree.cc^$important
 ||report.idazhe.net^$important
 ||union-dracoapi.yy.com^$important
+
+#网赚类 App 的广告/归因后端（2026-10-01 排查一台华为手机的广告重试风暴时定位）
+#证据：api-dot.seaportwise.top 的 Swagger 文档自称「新广告平台API接口服务」，
+#      含 支付宝/微信小程序、短剧解锁、听书音频、CPA任务打点、金币兑换/红包提现；
+#      funlinkads 官网自述面向「网赚工具类」App；report.bjzghd.com 属北京中关互动
+#      （激励视频/信息流广告）；muchcloud 为诸云科技的 IP 归属查询（广告定向/风控）
+||api-dot.seaportwise.top^$important
+||dp.funlinkads.com^$important
+||report.bjzghd.com^$important
+||getip.muchcloud.com^$important
+||mjh4-go.muchcloud.com^$important
+||d1.yyzqta.com^$important

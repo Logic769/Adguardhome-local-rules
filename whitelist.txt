@@ -169,3 +169,15 @@
 #biliapi.net 是 B站 API；它同时也写在本仓库黑名单里，白名单优先级更高，会从黑名单中移除
 @@||aweme.snssdk.com^$important
 @@||biliapi.net^$important
+
+#华为设备基础设施（2026-10-01 用户确认放行）
+#grs.* = 华为 GRS 全球路由服务，设备用它选择最近的云服务节点。
+#实测这台华为手机被拦后会对 .com/.cn/.ru/.eu/.asia 五个区域逐个重试（各 137~144 次/105分钟），
+#属于"连不上就换区域"的兜底行为 —— 拦它只会让设备白跑，挡不住广告。
+@@||grs.dbankcloud.com^$important
+@@||grs.dbankcloud.cn^$important
+@@||grs.dbankcloud.asia^$important
+@@||grs.dbankcloud.eu^$important
+@@||grs.platform.dbankcloud.ru^$important
+#华为内容中心 CDN（仅 1 个上游名单拦截，属功能域，非广告）
+@@||contentcenter-drcn.dbankcdn.cn^$important

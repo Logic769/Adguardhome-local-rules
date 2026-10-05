@@ -196,7 +196,9 @@
 
 #天猫校园（Tmall Campus）App 扫码链路误杀（2026-10-05 实测）
 #现象：App 扫到码后一直转圈；关闭 AdGuard 过滤后立即正常 → 确认系名单误杀。
-#验证：逐条剥离 + 真机复测，下列 3 条为功能必需（摘任一条扫码即挂）：
+#现状（2026-10-06 复核，诚实口径）：本组均为 App 自有功能域名且非广告端点，可安全放行；
+#但"逐条剥离必需性"是在当时 DoT 中继抖动窗口内做的，证据等级已降级（该窗口 DNS 会整段失败，
+#会伪造出"摘任一条即挂"的结果）。扫码失败的真正根因见文件末尾「手机系统服务」一组。
 #  tls-tmall-campus.dingtalk.com  天猫校园 DingTalk IM PaaS，App 每次启动必查
 #  asearch.alicdn.com             扫码识别/搜索，位于链路最前，被拦后流程直接中断
 #  audid-api.taobao.com           设备 ID/鉴权，紧随其后的关键一步
@@ -215,3 +217,43 @@
 @@||umdc.alibabachengdun.com^$important
 @@||jx.tmall.com^$important
 @@||huodong.m.taobao.com^$important
+#OPPO/ColorOS 手机系统服务（2026-10-06 实测：被拦会让该手机 App 联网异常）
+#现象：天猫校园扫码确定性失败（转圈），按族二分后定位到本组——放行即恢复，真机重复复现 3/3。
+#机理：这些都是设备侧的基础服务（云配置/连接服务/HTTPDNS/推送通道/云盘/主题/输入法等），
+#      拦住会让手机的 App 联网链路整体受损，与应用自身的域名无关。
+#注意：OPPO 自己的**推送广告与埋点**主机（push-ads-cn / *.ads.heytapmobi.com / uc-track-gl /
+#      mdp-usertrace-cn / cl-data.ads.* / stg-data.ads.*）**不在本组，继续保持拦截**。
+@@||apisnd.heytapmobi.com^
+@@||cloudconf-app-cn.heytapmobi.com^
+@@||obus-cn.dc.heytapmobi.com^
+@@||obus-config-cn.heytapmobi.com^
+@@||obus-conf-cn.heytapmobi.com^
+@@||obus-dc2020-cn.heytapmobi.com^
+@@||obus-dc2007-cn.heytapmobi.com^
+@@||conn-service-cn-07.allawntech.com^
+@@||conn-service-cn-08.allawntech.com^
+@@||gslb-cn.cdo.heytapmobi.com^
+@@||api.cdo.oppomobile.com^
+@@||cloudkit-api-cn.heytapmobi.com^
+@@||cloudkit-api-cn.ocloud.heytapmobi.com^
+@@||cloudkit-support-cn.heytapmobi.com^
+@@||ocloud-api-cn.heytapmobi.com^
+@@||ocloud-io75t-cn.heytapmobi.com^
+@@||io75k.ocloud.heytapmobi.com^
+@@||ocloud-httpdns-cn.heytapmobi.com^
+@@||httpdns.ocloud.heytapmobi.com^
+@@||theme.heytapimage.com^
+@@||smarthome.iot.heytapmobi.com^
+@@||kbd-ime-cn.heytapmobi.com^
+@@||iot-earbuds-cn.heytapmobi.com^
+@@||omes-sec.heytapmobi.com^
+@@||dc-dragate-cn.heytapmobi.com^
+@@||smartcard.apps.coloros.com^
+@@||mdp-appconf-cn.heytapdownload.com^
+@@||mdp-appconf-cn.heytapmobi.com^
+@@||remotedesktop-api-cn.allawntech.com^
+@@||traffic-monitor-cn.allawntech.com^
+@@||weather-server.allawntech.com^
+@@||nebula-api-cn.heytapmobi.com^
+@@||fourier-videoclip-cn.allawntech.com^
+@@||crypto-dsf-cn.allawntech.com^

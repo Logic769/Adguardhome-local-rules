@@ -144,6 +144,12 @@
 #天猫网关（App/网页主站网关，CNAME=shop.tmall.com）
 @@||gw.tmall.com^$important
 
+#o.alicdn.com：天猫校园扫码功能的资源主机（Host 证书 CN=*.tbcdn.cn，淘宝/阿里系 CDN）
+#2026-10-03 误杀复盘：该域不在本仓库任何清单里，是直接写在 AGH「自定义过滤规则」中的
+#||o.alicdn.com^ 拦掉的，App 扫码时报“网络异常”。此处登记白名单，防止后续重建再被拦。
+#注意 alicdn.com 域空间内的广告端点是 atanx./nbsdk-baichuan./baichuan-sdk. 三个主机（黑名单在拦）
+@@||o.alicdn.com^$important
+
 #腾讯手游 MSDK：登录/支付/公告/资源入口，被 GOODBYEADS、adsethost、那个谁520 三个名单误拦
 #（实测 msdk.qq.com 被拦；di.ssl.msdk.qq.com 才是数据上报端点，保持拦截）
 @@||msdk.qq.com^$important
@@ -187,3 +193,25 @@
 #被 natsuki 名单误收。实测：经本名单解析为 NXDOMAIN，直连 Unbound 与
 #阿里/腾讯/Google 公共解析器均正常（Cloudflare 172.67.148.227 等）。
 @@||d.skk.moe^$important
+
+#天猫校园（Tmall Campus）App 扫码链路误杀（2026-10-05 实测）
+#现象：App 扫到码后一直转圈；关闭 AdGuard 过滤后立即正常 → 确认系名单误杀。
+#验证：逐条剥离 + 真机复测，下列 3 条为功能必需（摘任一条扫码即挂）：
+#  tls-tmall-campus.dingtalk.com  天猫校园 DingTalk IM PaaS，App 每次启动必查
+#  asearch.alicdn.com             扫码识别/搜索，位于链路最前，被拦后流程直接中断
+#  audid-api.taobao.com           设备 ID/鉴权，紧随其后的关键一步
+#其余为 App 自有/功能域名（启动与扫码期间实测查询，均属功能域，非广告端点）。
+#策略不变：本仓库黑名单继续拦 adashx / h-adashx / gm.mmstat / baichuan-sdk /
+#  httpdns.alicdn.com，以及友盟 at.umeng.com 等埋点统计端点。
+@@||tls-tmall-campus.dingtalk.com^$important
+@@||asearch.alicdn.com^$important
+@@||audid-api.taobao.com^$important
+@@||hybrid.miniapp.taobao.com^$important
+@@||api.wapa.taobao.com^$important
+@@||abtest.alibaba.com^$important
+@@||fourier.alibaba.com^$important
+@@||mum.alibabachengdun.com^$important
+@@||mum.alibabachengdun.net^$important
+@@||umdc.alibabachengdun.com^$important
+@@||jx.tmall.com^$important
+@@||huodong.m.taobao.com^$important

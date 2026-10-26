@@ -257,3 +257,5 @@
 @@||nebula-api-cn.heytapmobi.com^
 @@||fourier-videoclip-cn.allawntech.com^
 @@||crypto-dsf-cn.allawntech.com^
+@@||k1-global.gslb.ksyuncdn.com^$important
+@@||mooc-res2.chaoxing.com^$important
